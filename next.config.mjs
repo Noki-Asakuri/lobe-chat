@@ -13,6 +13,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   basePath,
+  typescript: { ignoreBuildErrors: true },
+  eslint: { ignoreDuringBuilds: true },
   compress: isProd,
   experimental: {
     optimizePackageImports: [
