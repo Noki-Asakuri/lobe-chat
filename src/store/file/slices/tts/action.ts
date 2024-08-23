@@ -2,8 +2,8 @@ import useSWR, { SWRResponse } from 'swr';
 import { StateCreator } from 'zustand/vanilla';
 
 import { fileService } from '@/services/file';
-import { uploadService } from '@/services/upload';
-import { FilePreview } from '@/types/files';
+import { legacyUploadService } from '@/services/upload_legacy';
+import { FileItem } from '@/types/files';
 
 import { FileStore } from '../../store';
 
@@ -17,7 +17,7 @@ export interface TTSFileAction {
 
   uploadTTSFile: (file: File) => Promise<string | undefined>;
 
-  useFetchTTSFile: (id: string | null) => SWRResponse<FilePreview>;
+  useFetchTTSFile: (id: string | null) => SWRResponse<FileItem>;
 }
 
 export const createTTSFileSlice: StateCreator<
@@ -42,7 +42,7 @@ export const createTTSFileSlice: StateCreator<
   },
   uploadTTSFile: async (file) => {
     try {
-      const res = await uploadService.uploadFile({
+      const res = await legacyUploadService.uploadFile({
         createdAt: file.lastModified,
         data: await file.arrayBuffer(),
         fileType: file.type,
