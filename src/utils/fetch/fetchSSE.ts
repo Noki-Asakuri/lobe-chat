@@ -72,7 +72,7 @@ const createSmoothMessage = (params: {
 
   // define startAnimation function to display the text in buffer smooth
   // when you need to start the animation, call this function
-  const startAnimation = (speed = startSpeed) =>
+  const startAnimation = (_speed = startSpeed) =>
     new Promise<void>((resolve) => {
       if (isAnimationActive) {
         resolve();
@@ -147,7 +147,7 @@ const createSmoothToolCalls = (params: {
     }
   };
 
-  const startAnimation = (index: number, speed = startSpeed) =>
+  const startAnimation = (index: number, _speed = startSpeed) =>
     new Promise<void>((resolve) => {
       if (isAnimationActives[index]) {
         resolve();
