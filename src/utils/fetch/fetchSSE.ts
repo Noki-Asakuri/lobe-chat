@@ -94,7 +94,7 @@ const createSmoothMessage = (params: {
         // 检查队列中是否有字符待显示
         if (outputQueue.length > 0) {
           // 从队列中获取前 n 个字符（如果存在）
-          const charsToAdd = outputQueue.splice(0, speed).join('');
+          const charsToAdd = outputQueue.splice(0, outputQueue.length).join('');
           buffer += charsToAdd;
 
           // 更新消息内容，这里可能需要结合实际情况调整
@@ -163,7 +163,7 @@ const createSmoothToolCalls = (params: {
         }
 
         if (outputQueues[index].length > 0) {
-          const charsToAdd = outputQueues[index].splice(0, speed).join('');
+          const charsToAdd = outputQueues[index].splice(0, outputQueues[index].length).join('');
 
           const toolCallToUpdate = toolCallsBuffer[index];
 
