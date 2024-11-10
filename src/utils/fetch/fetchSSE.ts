@@ -72,6 +72,7 @@ const createSmoothMessage = (params: {
 
   // define startAnimation function to display the text in buffer smooth
   // when you need to start the animation, call this function
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const startAnimation = (_speed = startSpeed) =>
     new Promise<void>((resolve) => {
       if (isAnimationActive) {
@@ -147,6 +148,7 @@ const createSmoothToolCalls = (params: {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const startAnimation = (index: number, _speed = startSpeed) =>
     new Promise<void>((resolve) => {
       if (isAnimationActives[index]) {
