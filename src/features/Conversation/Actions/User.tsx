@@ -15,14 +15,14 @@ export const UserActionsBar: RenderAction = memo(({ onActionClick, id }) => {
     !!s.activeThreadId,
     threadSelectors.hasThreadBySourceMsgId(id)(s),
   ]);
-  const { regenerate, edit, copy, divider, del, branching } = useChatListActionsBar({ hasThread });
+  const { regenerate, edit, copy, divider, del } = useChatListActionsBar({ hasThread });
   const { translate, tts } = useCustomActions();
 
   const inPortalThread = useContext(InPortalThreadContext);
   const inThread = isThreadMode || inPortalThread;
 
   const items = useMemo(
-    () => [regenerate, edit, inThread ? null : branching].filter(Boolean) as ActionIconGroupItems[],
+    () => [regenerate, edit, del].filter(Boolean) as ActionIconGroupItems[],
     [inThread],
   );
 
