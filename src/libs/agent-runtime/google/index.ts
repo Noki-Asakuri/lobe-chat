@@ -91,12 +91,7 @@ export class LobeGoogleAI implements LobeRuntimeAI {
         .generateContentStream({
           contents,
           systemInstruction: payload.system as string,
-          tools: (() => {
-            if (!payload.tools && model.startsWith('gemini-2.0')) {
-              return [{ googleSearch: {} } as GoogleFunctionCallTool];
-            }
-            return this.buildGoogleTools(payload.tools);
-          })(),
+          tools: this.buildGoogleTools(payload.tools),
         });
 
       const googleStream = convertIterableToStream(geminiStreamResult.stream);
@@ -293,13 +288,17 @@ export class LobeGoogleAI implements LobeRuntimeAI {
   private convertToolToGoogleTool = (tool: ChatCompletionTool): FunctionDeclaration => {
     const functionDeclaration = tool.function;
     const parameters = functionDeclaration.parameters;
+    // refs: https://github.com/lobehub/lobe-chat/pull/5002
+    const properties = parameters?.properties && Object.keys(parameters.properties).length > 0
+    ? parameters.properties
+    : { dummy: { type: 'string' } }; // dummy property to avoid empty object
 
     return {
       description: functionDeclaration.description,
       name: functionDeclaration.name,
       parameters: {
         description: parameters?.description,
-        properties: parameters?.properties,
+        properties: properties,
         required: parameters?.required,
         type: SchemaType.OBJECT,
       },
