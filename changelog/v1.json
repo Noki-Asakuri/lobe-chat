@@ -1,6 +1,95 @@
 [
   {
     "children": {
+      "features": ["Upgrade to next15 and react19."]
+    },
+    "date": "2024-12-23",
+    "version": "1.39.0"
+  },
+  {
+    "children": {
+      "features": ["Support thread in client pglite."]
+    },
+    "date": "2024-12-23",
+    "version": "1.38.0"
+  },
+  {
+    "children": {
+      "improvements": ["Move pglite to client service."]
+    },
+    "date": "2024-12-22",
+    "version": "1.37.2"
+  },
+  {
+    "children": {
+      "improvements": ["Refactor the client service to deprecated."]
+    },
+    "date": "2024-12-22",
+    "version": "1.37.1"
+  },
+  {
+    "children": {
+      "features": ["Support to use pglite as client db."]
+    },
+    "date": "2024-12-22",
+    "version": "1.37.0"
+  },
+  {
+    "children": {
+      "improvements": ["Refactor client mode upload to match server mode."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.46"
+  },
+  {
+    "children": {
+      "improvements": ["Add o1 model in GitHub models."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.45"
+  },
+  {
+    "children": {
+      "improvements": ["Add Gemini flash thinking model."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.44"
+  },
+  {
+    "children": {},
+    "date": "2024-12-21",
+    "version": "1.36.43"
+  },
+  {
+    "children": {
+      "fixes": ["Fix HUGGINGFACE endpoint url."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.42"
+  },
+  {
+    "children": {
+      "improvements": ["Upgrade react scan."]
+    },
+    "date": "2024-12-21",
+    "version": "1.36.41"
+  },
+  {
+    "children": {
+      "improvements": ["Seperate user keyVaults encrpyto from user model."]
+    },
+    "date": "2024-12-20",
+    "version": "1.36.40"
+  },
+  {
+    "children": {
+      "improvements": ["Refactor to use async headers()."]
+    },
+    "date": "2024-12-20",
+    "version": "1.36.39"
+  },
+  {
+    "children": {
       "improvements": ["Refactor layout props."]
     },
     "date": "2024-12-20",

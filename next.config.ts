@@ -1,17 +1,20 @@
 import analyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 import withSerwistInit from '@serwist/next';
+import type { NextConfig } from 'next';
+import ReactComponentName from 'react-scan/react-component-name/webpack';
 
 const isProd = process.env.NODE_ENV === 'production';
 const buildWithDocker = process.env.DOCKER === 'true';
+const enableReactScan = !!process.env.REACT_SCAN_MONITOR_API_KEY;
+const isUsePglite = process.env.NEXT_PUBLIC_CLIENT_DB === 'pglite';
 
 // if you need to proxy the api endpoint to remote server
 const API_PROXY_ENDPOINT = process.env.API_PROXY_ENDPOINT || '';
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   basePath,
   compress: isProd,
   experimental: {
@@ -103,7 +106,6 @@ const nextConfig = {
       },
     ];
   },
-
   output: buildWithDocker ? 'standalone' : undefined,
   reactStrictMode: true,
   redirects: async () => [
@@ -165,18 +167,24 @@ const nextConfig = {
       source: '/welcome',
     },
   ],
-
   rewrites: async () => [
     // due to google api not work correct in some countries
     // we need a proxy to bypass the restriction
     { destination: `${API_PROXY_ENDPOINT}/api/chat/google`, source: '/api/chat/google' },
   ],
 
+  serverExternalPackages: ['@electric-sql/pglite'],
+
   webpack(config) {
     config.experiments = {
       asyncWebAssembly: true,
       layers: true,
     };
+
+    // 开启该插件会导致 pglite 的 fs bundler 被改表
+    if (enableReactScan && !isUsePglite) {
+      config.plugins.push(ReactComponentName({}));
+    }
 
     // to fix shikiji compile error
     // refs: https://github.com/antfu/shikiji/issues/23
@@ -197,7 +205,7 @@ const nextConfig = {
   },
 };
 
-const noWrapper = (config) => config;
+const noWrapper = (config: NextConfig) => config;
 
 const withBundleAnalyzer = process.env.ANALYZE === 'true' ? analyzer() : noWrapper;
 
@@ -212,7 +220,7 @@ const withPWA = isProd
 const hasSentry = !!process.env.NEXT_PUBLIC_SENTRY_DSN;
 const withSentry =
   isProd && hasSentry
-    ? (c) =>
+    ? (c: NextConfig) =>
         withSentryConfig(
           c,
           {
@@ -253,4 +261,4 @@ const withSentry =
         )
     : noWrapper;
 
-export default withBundleAnalyzer(withPWA(withSentry(nextConfig)));
+export default withBundleAnalyzer(withPWA(withSentry(nextConfig) as NextConfig));
