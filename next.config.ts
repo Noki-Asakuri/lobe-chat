@@ -164,7 +164,7 @@ const nextConfig: NextConfig = {
       source: '/welcome',
     },
   ],
-  serverExternalPackages: ['@electric-sql/pglite'],
+  serverExternalPackages: ['@electric-sql/pglite', 'sharp'],
 
   transpilePackages: ['pdfjs-dist', 'mermaid'],
 
