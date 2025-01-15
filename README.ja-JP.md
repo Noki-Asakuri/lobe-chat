@@ -8,7 +8,7 @@
 音声合成、マルチモーダル、拡張可能な（[function call][docs-functionc-call]）プラグインシステムをサポート。<br/>
 プライベートな OpenAI ChatGPT/Claude/Gemini/Groq/Ollama チャットアプリケーションをワンクリックで**無料**でデプロイ。
 
-[English](./README.md) · [简体中文](./README.zh-CN.md) · **日本語** · [公式サイト][official-site] · [変更履歴][changelog] · [ドキュメント][docs] · [ブログ][blog] · [フィードバック][github-issues-link]
+[English](./README.md) · [繁體中文](./README.zh-TW.md) · [简体中文](./README.zh-CN.md) · **日本語** · [公式サイト][official-site] · [変更履歴][changelog] · [ドキュメント][docs] · [ブログ][blog] · [フィードバック][github-issues-link]
 
 <!-- SHIELD GROUP -->
 
