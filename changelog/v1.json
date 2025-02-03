@@ -1,6 +1,62 @@
 [
   {
     "children": {
+      "fixes": ["Optimize requests without historical messages."]
+    },
+    "date": "2025-02-03",
+    "version": "1.49.13"
+  },
+  {
+    "children": {
+      "fixes": ["Fix can not stop generating."]
+    },
+    "date": "2025-02-02",
+    "version": "1.49.12"
+  },
+  {
+    "children": {
+      "fixes": ["Fix ollama intergration checker and client fetch issue."]
+    },
+    "date": "2025-02-02",
+    "version": "1.49.11"
+  },
+  {
+    "children": {
+      "fixes": ["Fix <think> tag crash with special markdown content."]
+    },
+    "date": "2025-02-02",
+    "version": "1.49.10"
+  },
+  {
+    "children": {
+      "improvements": ["Update siliconcloud models."]
+    },
+    "date": "2025-02-01",
+    "version": "1.49.9"
+  },
+  {
+    "children": {
+      "improvements": ["Support thinking for all non DeepSeek official api R1 models."]
+    },
+    "date": "2025-02-01",
+    "version": "1.49.8"
+  },
+  {
+    "children": {
+      "fixes": ["Multiple deepseek-reasoner request errors."]
+    },
+    "date": "2025-02-01",
+    "version": "1.49.7"
+  },
+  {
+    "children": {
+      "fixes": ["Support litellm reasoning streaming."]
+    },
+    "date": "2025-01-30",
+    "version": "1.49.6"
+  },
+  {
+    "children": {
       "fixes": ["Pin @clerk/nextjs@6.10.2 to avoid build error."]
     },
     "date": "2025-01-28",
