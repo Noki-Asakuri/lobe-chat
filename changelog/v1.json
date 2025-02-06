@@ -1,6 +1,26 @@
 [
   {
     "children": {
+      "improvements": ["Add Cache, Metadata, FeatureFlag Viewer to DevPanel."],
+      "fixes": ["Artifact Parsing and Rendering Bug Fix for Gemini 2.0 Flash."]
+    },
+    "date": "2025-02-05",
+    "version": "1.51.3"
+  },
+  {
+    "children": {
+      "improvements": ["Update model list, add reasoning tag."]
+    },
+    "date": "2025-02-05",
+    "version": "1.51.2"
+  },
+  {
+    "children": {},
+    "date": "2025-02-05",
+    "version": "1.51.1"
+  },
+  {
+    "children": {
       "features": ["Add reasoning tag support for custom models via UI or ENV."],
       "fixes": [
         "Fix deepseek-v3 & qvq model tag fetch error from SiliconCloud, fix model ability missing."
