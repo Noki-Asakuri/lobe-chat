@@ -1,6 +1,88 @@
 [
   {
     "children": {
+      "fixes": ["Fix home next auth error and update pnpm."]
+    },
+    "date": "2025-02-07",
+    "version": "1.51.15"
+  },
+  {
+    "children": {
+      "improvements": ["Update changelog cache and upgrade anthropic sdk."]
+    },
+    "date": "2025-02-07",
+    "version": "1.51.14"
+  },
+  {
+    "children": {
+      "fixes": ["Fix next auth error."]
+    },
+    "date": "2025-02-07",
+    "version": "1.51.13"
+  },
+  {
+    "children": {
+      "fixes": ["Try to fix next-auth issue."]
+    },
+    "date": "2025-02-07",
+    "version": "1.51.12"
+  },
+  {
+    "children": {
+      "fixes": ["Fix /file/[id] 500 issue."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.11"
+  },
+  {
+    "children": {
+      "fixes": ["Fix provider 500 issue."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.10"
+  },
+  {
+    "children": {
+      "improvements": ["Update edtion tag display and improve prerender."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.9"
+  },
+  {
+    "children": {
+      "improvements": ["Refactor model fetch method."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.8"
+  },
+  {
+    "children": {
+      "improvements": ["Add Aliyun deepseek-r1 distill models."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.7"
+  },
+  {
+    "children": {
+      "fixes": ["Try to fix discover error."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.6"
+  },
+  {
+    "children": {
+      "improvements": ["Add siliconcloud models."]
+    },
+    "date": "2025-02-06",
+    "version": "1.51.5"
+  },
+  {
+    "children": {},
+    "date": "2025-02-06",
+    "version": "1.51.4"
+  },
+  {
+    "children": {
       "improvements": ["Add Cache, Metadata, FeatureFlag Viewer to DevPanel."],
       "fixes": ["Artifact Parsing and Rendering Bug Fix for Gemini 2.0 Flash."]
     },
