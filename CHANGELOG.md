@@ -2,6 +2,181 @@
 
 # Changelog
 
+### [Version 1.60.6](https://github.com/lobehub/lobe-chat/compare/v1.60.5...v1.60.6)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add o1 vision metadata.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add o1 vision metadata, closes [#6263](https://github.com/lobehub/lobe-chat/issues/6263) ([261d068](https://github.com/lobehub/lobe-chat/commit/261d068))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.60.5](https://github.com/lobehub/lobe-chat/compare/v1.60.4...v1.60.5)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix loading on not login for db.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix loading on not login for db, closes [#6258](https://github.com/lobehub/lobe-chat/issues/6258) ([61692b9](https://github.com/lobehub/lobe-chat/commit/61692b9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.60.4](https://github.com/lobehub/lobe-chat/compare/v1.60.3...v1.60.4)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix agent config not load correctly.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix agent config not load correctly, closes [#6252](https://github.com/lobehub/lobe-chat/issues/6252) ([fe9bc16](https://github.com/lobehub/lobe-chat/commit/fe9bc16))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.60.3](https://github.com/lobehub/lobe-chat/compare/v1.60.2...v1.60.3)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: User feedback for empty/long group names in create/edit group modals.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: User feedback for empty/long group names in create/edit group modals, closes [#6247](https://github.com/lobehub/lobe-chat/issues/6247) ([25c80d1](https://github.com/lobehub/lobe-chat/commit/25c80d1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.60.2](https://github.com/lobehub/lobe-chat/compare/v1.60.1...v1.60.2)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix model list issue in client mode.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix model list issue in client mode, closes [#6240](https://github.com/lobehub/lobe-chat/issues/6240) ([d6c6cda](https://github.com/lobehub/lobe-chat/commit/d6c6cda))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.60.1](https://github.com/lobehub/lobe-chat/compare/v1.60.0...v1.60.1)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update Jina AI Provider name & model info.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update Jina AI Provider name & model info, closes [#6243](https://github.com/lobehub/lobe-chat/issues/6243) ([ddbe482](https://github.com/lobehub/lobe-chat/commit/ddbe482))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version 1.60.0](https://github.com/lobehub/lobe-chat/compare/v1.59.0...v1.60.0)
+
+<sup>Released on **2025-02-17**</sup>
+
+#### ✨ Features
+
+- **misc**: Add SambaNova provider support.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Add SambaNova provider support, closes [#6218](https://github.com/lobehub/lobe-chat/issues/6218) ([a46eadf](https://github.com/lobehub/lobe-chat/commit/a46eadf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.59.0](https://github.com/lobehub/lobe-chat/compare/v1.58.0...v1.59.0)
 
 <sup>Released on **2025-02-16**</sup>
