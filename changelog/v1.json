@@ -1,6 +1,20 @@
 [
   {
     "children": {
+      "improvements": ["Sync chat limit."]
+    },
+    "date": "2025-02-18",
+    "version": "1.60.8"
+  },
+  {
+    "children": {
+      "improvements": ["Remove deprecated gemini models, update MiniMax models."]
+    },
+    "date": "2025-02-17",
+    "version": "1.60.7"
+  },
+  {
+    "children": {
       "improvements": ["Add o1 vision metadata."]
     },
     "date": "2025-02-17",
