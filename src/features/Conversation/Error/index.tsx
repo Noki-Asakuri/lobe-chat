@@ -32,10 +32,15 @@ const getErrorAlertConfig = (
       type: 'warning',
     };
 
+  /* ↓ cloud slot ↓ */
+
+  /* ↑ cloud slot ↑ */
+
   switch (errorType) {
     case ChatErrorType.SystemTimeNotMatchError:
     case AgentRuntimeErrorType.PermissionDenied:
     case AgentRuntimeErrorType.InsufficientQuota:
+    case AgentRuntimeErrorType.ModelNotFound:
     case AgentRuntimeErrorType.QuotaLimitReached:
     case AgentRuntimeErrorType.ExceededContextWindow:
     case AgentRuntimeErrorType.LocationNotSupportError: {
@@ -87,6 +92,10 @@ const ErrorMessageExtra = memo<{ data: ChatMessage }>(({ data }) => {
     case AgentRuntimeErrorType.OllamaBizError: {
       return <OllamaBizError {...data} />;
     }
+
+    /* ↓ cloud slot ↓ */
+
+    /* ↑ cloud slot ↑ */
 
     case ChatErrorType.InvalidClerkUser: {
       return <ClerkLogin id={data.id} />;
