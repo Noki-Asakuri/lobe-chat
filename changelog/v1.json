@@ -1,6 +1,56 @@
 [
   {
     "children": {
+      "improvements": ["Add Claude 3.7 Sonnet and Haiku 3.5."]
+    },
+    "date": "2025-02-25",
+    "version": "1.64.3"
+  },
+  {
+    "children": {
+      "fixes": ["Fix 0 search results with specific search engine."]
+    },
+    "date": "2025-02-25",
+    "version": "1.64.2"
+  },
+  {
+    "children": {
+      "fixes": ["Disable fc for ds-v3 series."]
+    },
+    "date": "2025-02-25",
+    "version": "1.64.1"
+  },
+  {
+    "children": {
+      "features": ["Support application search with searchXNG."]
+    },
+    "date": "2025-02-24",
+    "version": "1.64.0"
+  },
+  {
+    "children": {
+      "fixes": ["Fix citation=null issue in stream."]
+    },
+    "date": "2025-02-24",
+    "version": "1.63.3"
+  },
+  {
+    "children": {
+      "fixes": ["Fix model settings config."]
+    },
+    "date": "2025-02-24",
+    "version": "1.63.2"
+  },
+  {
+    "children": {
+      "fixes": ["Fix groq location request."],
+      "improvements": ["Improve plugin calling style."]
+    },
+    "date": "2025-02-23",
+    "version": "1.63.1"
+  },
+  {
+    "children": {
       "features": ["Support model-level search for Google/Qwen."],
       "improvements": ["Update many models info."]
     },

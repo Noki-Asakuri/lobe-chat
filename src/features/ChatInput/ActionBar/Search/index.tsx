@@ -6,45 +6,34 @@ import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
+import { isDeprecatedEdition } from '@/const/version';
+import { useAgentEnableSearch } from '@/hooks/useAgentEnableSearch';
 import { useIsMobile } from '@/hooks/useIsMobile';
 import { useAgentStore } from '@/store/agent';
 import { agentSelectors } from '@/store/agent/selectors';
-import { aiModelSelectors, aiProviderSelectors, useAiInfraStore } from '@/store/aiInfra';
 
 import AINetworkSettings from './SwitchPanel';
 
 const Search = memo(() => {
   const { t } = useTranslation('chat');
-  const [isLoading, isAgentEnableSearch] = useAgentStore((s) => [
-    agentSelectors.isAgentConfigLoading(s),
-    agentSelectors.isAgentEnableSearch(s),
-  ]);
-  const [model, provider] = useAgentStore((s) => [
-    agentSelectors.currentAgentModel(s),
-    agentSelectors.currentAgentModelProvider(s),
-  ]);
-
-  const [isModelHasBuiltinSearch] = useAiInfraStore((s) => [
-    aiModelSelectors.isModelHasBuiltinSearchConfig(model, provider)(s),
-    aiProviderSelectors.isProviderHasBuiltinSearchConfig(provider)(s),
-  ]);
+  const [isLoading] = useAgentStore((s) => [agentSelectors.isAgentConfigLoading(s)]);
+  const isAgentEnableSearch = useAgentEnableSearch();
 
   const isMobile = useIsMobile();
 
   const theme = useTheme();
-  if (isLoading)
-    return (
-      <ActionIcon
-        icon={Globe}
-        placement={'bottom'}
-        style={{
-          cursor: 'not-allowed',
-        }}
-      />
-    );
+
+  if (isLoading) return null;
+  // <ActionIcon
+  //   icon={Globe}
+  //   placement={'bottom'}
+  //   style={{
+  //     cursor: 'not-allowed',
+  //   }}
+  // />
 
   return (
-    isModelHasBuiltinSearch && (
+    !isDeprecatedEdition && (
       <Flexbox>
         <Popover
           arrow={false}
