@@ -30,6 +30,7 @@ import OllamaProvider from './ollama';
 import OpenAIProvider from './openai';
 import OpenRouterProvider from './openrouter';
 import PerplexityProvider from './perplexity';
+import PPIOProvider from './ppio';
 import QwenProvider from './qwen';
 import SambaNovaProvider from './sambanova';
 import SenseNovaProvider from './sensenova';
@@ -92,6 +93,7 @@ export const LOBE_DEFAULT_MODEL_LIST: ChatModelCard[] = [
   SenseNovaProvider.chatModels,
   InternLMProvider.chatModels,
   HigressProvider.chatModels,
+  PPIOProvider.chatModels,
 ].flat();
 
 export const DEFAULT_MODEL_PROVIDER_LIST = [
@@ -110,6 +112,7 @@ export const DEFAULT_MODEL_PROVIDER_LIST = [
   CloudflareProvider,
   GithubProvider,
   NovitaProvider,
+  PPIOProvider,
   NvidiaProvider,
   TogetherAIProvider,
   FireworksAIProvider,
@@ -148,7 +151,7 @@ export const filterEnabledModels = (provider: ModelProviderCard) => {
   return provider.chatModels.filter((v) => v.enabled).map((m) => m.id);
 };
 
-export const isProviderDisableBroswerRequest = (id: string) => {
+export const isProviderDisableBrowserRequest = (id: string) => {
   const provider = DEFAULT_MODEL_PROVIDER_LIST.find((v) => v.id === id && v.disableBrowserRequest);
   return !!provider;
 };
@@ -183,6 +186,7 @@ export { default as OllamaProviderCard } from './ollama';
 export { default as OpenAIProviderCard } from './openai';
 export { default as OpenRouterProviderCard } from './openrouter';
 export { default as PerplexityProviderCard } from './perplexity';
+export { default as PPIOProviderCard } from './ppio';
 export { default as QwenProviderCard } from './qwen';
 export { default as SambaNovaProviderCard } from './sambanova';
 export { default as SenseNovaProviderCard } from './sensenova';
