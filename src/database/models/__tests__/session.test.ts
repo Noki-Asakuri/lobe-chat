@@ -2,7 +2,6 @@ import { and, eq, inArray } from 'drizzle-orm/expressions';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { DEFAULT_AGENT_CONFIG } from '@/const/settings';
-import { getTestDBInstance } from '@/database/server/core/dbForTest';
 import { LobeChatDatabase } from '@/database/type';
 import { idGenerator } from '@/database/utils/idGenerator';
 
@@ -895,7 +894,9 @@ describe('SessionModel', () => {
         await trx.insert(topics).values([
           { id: 't1', sessionId: '1', userId },
           { id: 't2', sessionId: '1', userId },
+          { id: 't6', sessionId: '1', userId },
           { id: 't3', sessionId: '2', userId },
+          { id: 't8', sessionId: '2', userId },
           { id: 't4', sessionId: '3', userId },
         ]);
       });
